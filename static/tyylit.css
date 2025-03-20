@@ -1,4 +1,11 @@
 
-BODY { background-color: #eef; }
-H1 { color: #0a0; border: 2px solid; }
+BODY {
+    height: 100vh ;
+    background: linear-gradient(to bottom, #1C6EA4 0%, #51b9ff 50%, #003355 100%); 
+}
+H1 { color: rgb(255, 255, 255); 
+    border: 2px solid; 
+    font-family: Arial;
+    font-size: 99;
+}
 
