@@ -6,6 +6,8 @@ app = Flask(__name__)
 @app.route("/")
 def root():
     return render_template('lomake.html')
+with open("high_score.txt" , "w") as high_score:
+            high_score.write(str(0))
 
 @app.route("/vastaus")
 def vastaus():
