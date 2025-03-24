@@ -1,12 +1,35 @@
 <html>
 <head>
 	<link rel=stylesheet href="{{url_for('static',filename='tyylit.css')}}">
+	<style>
+		.button {
+		  display: inline-block;
+		  padding: 50px 50px;
+		  font-size: 24px;
+		  cursor: pointer;
+		  text-align: center;
+		  text-decoration: none;
+		  outline: none;
+		  color: #fff;
+		  background-color: #ff0000;
+		  border: none;
+		  border-radius: 15px;
+		  box-shadow: 0 9px #464646;
+		}
+		
+		.button:hover {background-color: #830000}
+		
+		.button:active {
+		  background-color: #9a9a00;
+		  box-shadow: 0 5px #464646;
+		  transform: translateY(4px);
+		}
+		</style>
 </head>
 <body>
-	<h1>Laadukas laskin</h1>
+	<h1>Big Win Simulaattori 2025</h1>
 	<form method=GET action=vastaus>
-		<input type=text name="nimi">
-		<input type=submit value="Laske">
+		<button type = submit class="button">Uhkapelaa</button>
 	</form>
 </body>
 </html>

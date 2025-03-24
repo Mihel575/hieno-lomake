@@ -9,15 +9,18 @@ def root():
 
 @app.route("/vastaus")
 def vastaus():
-    #uusi_nimi = request.args['nimi']
-    uusi_nimi = random.randint(1,100)
-    if uusi_nimi >= 70:
-        uusi_nimi = random.randint(1,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
-    #with open("kaikki_nimet.txt" , "a") as nimitiedosto:
-        #nimitiedosto.write(uusi_nimi + "   VALI   "+ "\n")
-        #kaikki_nimet = open('kaikki_nimet.txt').read()
-    return render_template('vastaus.html', nimi=uusi_nimi)
-    #return render_template('vastaus.html', nimi=request.args['nimi'])
+    uusi_score = random.randint(1,100)
+    if uusi_score >= 90:
+        uusi_score = random.randint(1,10000000)
+    with open("high_score.txt" , "r") as high_score:
+        o = high_score.read()
+        vanha_score = int(o)
+    if uusi_score >= vanha_score:
+        with open("high_score.txt" , "w") as high_score:
+            high_score.write(str(uusi_score))
+        return render_template('ennatys.html', uusi=uusi_score, vanha=vanha_score)
+    else:
+        return render_template('vastaus.html', uusi=uusi_score, vanha=vanha_score)
 
 if __name__=="__main__":
     app.run()

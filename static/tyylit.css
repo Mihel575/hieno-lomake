@@ -3,9 +3,19 @@ BODY {
     height: 100vh ;
     background: linear-gradient(to bottom, #1C6EA4 0%, #51b9ff 50%, #003355 100%); 
 }
-H1 { color: rgb(255, 255, 255); 
-    border: 2px solid; 
+
+
+H1 { 
+    height: auto;
     font-family: Arial;
-    font-size: 99;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#a9a907 0%, #ffff00 50%, #c8a01c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+p {
+    color: rgb(255, 255, 255); 
+    font-family: Impact;
+    font-size: 49;
+}
